@@ -20,6 +20,13 @@ Compulsory environment variables used by this insomnia plugin are:
 
 ### To install plugin manually
 
+#### application preference dialog
+
+- Open the tab preference panel Insomnia -> Preferences -> Plugins.
+- copy `insomnia-plugin-auth-wsse` in the field and click the button "Install Plugin"
+
+#### manual installation (optional)
+
 1.  Checkout this repository;
 2.  run `npm i` or `yarn install`
 3.  Copy source code to insomnia plugins directory(see paths below);
