@@ -1,0 +1,34 @@
+{
+  "name": "insomnia-plugin-auth-wsse",
+  "version": "0.0.2",
+  "description": "Insomnia plugin: creates WSSE Auth header",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "Andreas Heissenberger",
+  "insomnia": {
+    "name": "auth-wsse",
+    "description": "creates WSSE Auth header based on parameters passed in environment variables"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aheissenberger/insomnia-plugin-auth-wsse.git"
+  },
+  "dependencies": {
+    "wsse": "^4.0.0"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "insomnia",
+    "plugin",
+    "plugins",
+    "auth",
+    "wsse"
+  ],
+  "bugs": {
+    "url": "https://github.com/aheissenberger/insomnia-plugin-auth-wsse/issues"
+  },
+  "homepage": "https://github.com/aheissenberger/insomnia-plugin-auth-wssed#readme",
+  "devDependencies": {}
+}
