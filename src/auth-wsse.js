@@ -2,6 +2,7 @@ const wsse = require("wsse").UsernameToken;
 
 module.exports = function(context) {
   const debug = context.request.getEnvironmentVariable("wsse_debug") === true;
+  const nonceBase64 = context.request.getEnvironmentVariable("wsse_nonce_base64") === true;
   debug && console.log("auth-wsse plugin executing ...");
   if (context.request.hasHeader("X-WSSE")) {
     debug &&
@@ -11,9 +12,9 @@ module.exports = function(context) {
   const authData = authDataProvider(context);
   debug && console.log(authData);
 
-  context.request.setHeader("X-WSSE", authData.getWSSEHeader());
+  context.request.setHeader("X-WSSE", authData.getWSSEHeader({ nonceBase64: nonceBase64 }));
   debug &&
-    console.log(`[header] Set X-WSSE header: ${authData.getWSSEHeader()}`);
+    console.log(`[header] Set X-WSSE header: ${authData.getWSSEHeader({ nonceBase64: nonceBase64 })}`);
 };
 
 function authDataProvider(context) {
