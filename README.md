@@ -9,7 +9,7 @@ Compulsory environment variables used by this insomnia plugin are:
 ```
 {
   "wsse_username": "",
-  "wsse_password": "",
+  "wsse_password": ""
 }
 ```
 
@@ -17,6 +17,7 @@ Compulsory environment variables used by this insomnia plugin are:
 
 - set `"wsse_sha1encoding": "hex"` for Emarsys API - Default: `"base64"` all options `"base64" | "latin1" | "hex"`
 - set `"wsse_debug": true` to log to console Insomnia -> View -> Toggle DevTool
+- set `"wsse_nonce_base64": true` to encode nonce in base 64 (default false)
 
 ### To install plugin manually
 
